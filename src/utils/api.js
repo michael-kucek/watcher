@@ -14,31 +14,3 @@ export function getShowFromAPI(show) {
         }
       }))
 }
-
-
-    // {
-    //   console.log(s, e)
-    //   // return {
-    //   //   name: data.name,
-    //   //   status: data.status,
-    //   //   image: data.image.medium,
-    //   //   // episodeCount: data._embedded.episodes.length,
-    //   // }
-    // })
-    // // .then(response => {
-    // //   return response.json().then(data => {
-    // //     if (response.ok) {
-    // //       // return data
-    // //       return {
-    // //         name: data.name,
-    // //         status: data.status,
-    // //         image: data.image.medium,
-    // //         // episodeCount: data._embedded.episodes.length,
-    // //       }
-    // //     } else {
-    // //       return Promise.reject({ status: response.status, data });
-    // //     }
-    // //   });
-    // // })
-    // .then(result => result)
-    // .catch(error => console.log('error:', error));
