@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.show-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.show-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 0 10px;
+}
