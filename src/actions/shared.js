@@ -1,11 +1,12 @@
 import { handleFetchShow } from '../actions/shows'
-import { getShowFromAPI } from '../utils/api'
+
+const initShows = [123, 1371, 34857]
 
 export default function handleInitialData() {
   return (dispatch) => {
-    getShowFromAPI(123)
-      .then(show => {
-        dispatch(handleFetchShow(show))
-      })
+    initShows.forEach(show => {
+      console.log('dispatching', show)
+      dispatch(handleFetchShow(show))
+    })
   }
 }
