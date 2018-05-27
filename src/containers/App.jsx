@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { connect } from "react-redux";
-import handleInitialData from "../actions/shared"
-import Shows from "./Shows";
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import handleInitialData from '../actions/shared'
+import Shows from './Shows'
 
 class App extends Component {
   componentDidMount() {
@@ -14,6 +15,10 @@ class App extends Component {
       </div>
     )
   }
+}
+
+App.propTypes = {
+  dispatch: PropTypes.func.isRequired,
 }
 
 export default connect()(App)

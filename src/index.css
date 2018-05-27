@@ -2,88 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: rgb(240, 239, 244);
+  color: rgb(23, 41, 73);
 }
-.show-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.show-img img {
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
-  margin: 0 10px;
-}
-
-.show-tile {
-  display: flex;
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
-  margin: 0.8em 1em;
-
-}
-.show-tile-poster {
-  display: block;
-  max-width:230px;
-  max-height:95px;
-  width: auto;
-  height: auto;
-  margin-right: 0.5em;
-}
-.show-tile-info {
-  margin: 0.5em;
-  list-style: none;
-  padding: 0em;
-  max-width: 20%;
-}
-.show-tile-title {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: slategray;
-  font-size: 1.2em;
-  margin-left: -0.4em;
-}
-.show-tile-status {
-  font-size: 0.8em;
-}
-.show-tile-watched {
-  font-size: 0.8em;
-}
-
-.season-squares {
-  width: 100%;
-}
-.show-squares {
-  display: flex;
-  padding: 2px;
-  width: 100%;
-  min-width: 200px;
-}
-.show-squares:hover {
-}
-.epSquare {
-  height: 10px;
-  border-style: solid;
+/* div {
+  border: black;
+  border-style: dashed;
   border-width: 1px;
-  border-color: black;
-  padding: none;
-}
-.epSquare > p {
-  font-size: 0.3em;
-  opacity: 0;
-}
-.epSquare:hover {
-  transition: all ease 0.8s;
-  background-color: red;
-}
-.epSquare:hover > p {
-  transition: all ease 0.8s;
-  opacity: 1;
-}
-.watched {
-  background-color: rosybrown;
-}
-.unwatched {
-  background: royalblue;
-}
+} */

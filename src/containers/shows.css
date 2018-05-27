@@ -1,0 +1,85 @@
+
+.show-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.show-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.show-tile {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 0.4em;
+  max-height: 95px;
+}
+.show-tile-poster {
+  width: 68px;
+}
+.show-tile-poster > img {
+  display: block;
+  max-height:95px;
+  margin-right: 0.5em;
+}
+.show-tile-title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -5px;
+}
+.show-tile-title {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgb(23, 41, 73);
+  font-size: 1.2em;
+  margin-left: 4px;
+  font-weight: bold;
+}
+.show-tile-upcoming {
+  font-size: 0.8em;
+  margin-right: 4px;
+}
+
+.season-squares {
+  width: 100%;
+}
+.show-season-bars {
+  padding: 2px;
+  background-color: rgb(251, 234, 176);
+  height: 97px;
+  padding: 0;
+  border: 0px solid black;
+}
+.show-squares:hover {
+}
+.epSquare {
+  height: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: none;
+}
+.epSquare > p {
+  font-size: 0.3em;
+  opacity: 0;
+}
+.epSquare:hover {
+  transition: all ease 0.8s;
+  background-color: red;
+}
+.epSquare:hover > p {
+  transition: all ease 0.8s;
+  opacity: 1;
+}
+.watched {
+  background-color: rosybrown;
+}
+.unwatched {
+  background: royalblue;
+}
