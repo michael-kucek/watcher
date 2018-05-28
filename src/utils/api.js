@@ -15,15 +15,13 @@ export default async function getShowFromAPI(show) {
   const seasons = eData[eData.length - 1].season
   const episodes = Array.from({ length: seasons }, () => [])
   eData.map(ep => episodes[ep.season - 1].push(ep))
-  // Date form is "YYYY-MM-DD"
   const nextEpisode = eData.filter(ep => moment().isBefore(ep.airdate))[0]
   return {
+    ...sData,
     episodeCount: eData.length,
     episodes,
-    id: sData.id,
+    allImages: sData.image,
     image: sData.image.medium,
-    name: sData.name,
     nextEpisode,
-    status: sData.status,
   }
 }

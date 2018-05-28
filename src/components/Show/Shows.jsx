@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { handleFetchShow } from '../actions/shows'
-// import Square from '../svgs/square'
-import ShowTile from '../components/Show/ShowTile'
+import { handleAddShow } from '../../actions/shows'
+import ShowTile from './ShowTile'
 import './shows.css'
 
 class Shows extends Component {
@@ -10,7 +9,7 @@ class Shows extends Component {
   handleChange = e => this.setState({ value: e.target.value })
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.dispatch(handleFetchShow(this.state.value))
+    this.props.dispatch(handleAddShow(this.state.value))
     this.setState({ value: '' })
   }
   render() {
@@ -28,7 +27,7 @@ class Shows extends Component {
         <div>
           <form name="get-show-form" onSubmit={this.handleSubmit}>
             <label htmlFor="get-show-form">
-              Fetch Show:
+              Add Show:
               <input type="text" value={this.state.value} onChange={this.handleChange} />
             </label>
             <input type="submit" value="Submit" />

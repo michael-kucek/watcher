@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import handleInitialData from '../actions/shared'
-import Shows from './Shows'
+import getInitialData from '../actions/shared'
+import Shows from './Show/Shows'
+import { getUserShows } from '../utils/db'
+
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
+    getUserShows().then(d => this.props.dispatch(getInitialData(Object.keys(d))))
   }
   render() {
     return (
