@@ -1,7 +1,9 @@
 import moment from 'moment'
 
-export default async function getShowFromAPI(show) {
-  const [s, e] = await Promise.all([fetch(`http://api.tvmaze.com/shows/${show}`), fetch(`http://api.tvmaze.com/shows/${show}/episodes`)])
+const API_URL = 'http://api.tvmaze.com'
+
+export async function getShowFromAPI(show) {
+  const [s, e] = await Promise.all([fetch(`${API_URL}/shows/${show}`), fetch(`${API_URL}/shows/${show}/episodes`)])
   const [sData, eData] = await Promise.all([s.json(), e.json()])
   eData.map((ep) => {
     return ep.image
@@ -24,4 +26,11 @@ export default async function getShowFromAPI(show) {
     image: sData.image.medium,
     nextEpisode,
   }
+}
+
+export async function searchForShows(text) {
+  const raw = await fetch(`${API_URL}/search/shows?q=${text}`)
+  const data = await raw.json()
+
+  console.table(data.map(d => d.show.name))
 }

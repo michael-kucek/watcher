@@ -1,4 +1,4 @@
-import getShowFromAPI from '../utils/api'
+import { getShowFromAPI } from '../utils/api'
 import { addShowToUser, removeShowFromUser } from '../utils/db'
 
 export const FETCH_SHOW = 'FETCH_SHOW'

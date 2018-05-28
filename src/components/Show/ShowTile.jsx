@@ -47,6 +47,10 @@ class ShowTile extends Component {
           </div>
           {SeasonBars()}
         </div>
+        <div>
+          Quick Action Bar!
+          <button>Watch Next Unwatched Show!</button>
+        </div>
         {
           this.state.showingDetail
             ? <SeasonDetail selectedSeason={this.state.selectedSeason} />

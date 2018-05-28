@@ -2,11 +2,15 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { handleAddShow } from '../../actions/shows'
 import ShowTile from './ShowTile'
+import { searchForShows } from '../../utils/api'
+
 import './shows.css'
 
 class Shows extends Component {
   state = { value: '' }
-  handleChange = e => this.setState({ value: e.target.value })
+  // need to change this... just a simple way to get a console log of the fetch
+  // possibly make a modal?
+  handleChange = e => this.setState({ value: e.target.value }, () => searchForShows(this.state.value))
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.dispatch(handleAddShow(this.state.value))
